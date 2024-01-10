@@ -32,7 +32,9 @@ const deleteFromCloudinary=async (url)=>{
         //delete file from cloudinary
         const deletedResponse=await cloudinary.uploader.destroy(url,{resource_type:"auto"});
         return deletedResponse;
+      
     } catch (error) {
+
         return null;
     }
 }
